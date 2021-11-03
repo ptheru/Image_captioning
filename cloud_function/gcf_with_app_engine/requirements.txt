@@ -1,0 +1,9 @@
+# Function dependencies, for example:
+# package>=version
+requests
+tensorflow
+efficientnet
+streamlit
+google_api_python_client
+protobuf
+google-cloud-storage
