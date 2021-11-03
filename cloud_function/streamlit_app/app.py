@@ -13,10 +13,9 @@ import time
 
 # Setup environment credentials 
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "caption-gen-cloud-func-a7ed6af5d635.json" 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "google_app_cred.json" 
 PROJECT = "caption-gen-cloud-func" 
-#REGION = "us-central1" # GCP region (where the model is hosted)
-GC_URL = "https://us-central1-caption-gen-cloud-func.cloudfunctions.net/caption_gen_v3"
+GC_URL = "https://[REGION]-[PROJECTID].cloudfunctions.net/[CLOUD FUCNTION]"
 
 storage_client = storage.Client(project=PROJECT)
 bucket = storage_client.get_bucket('caption_gen_ptheru')
