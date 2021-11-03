@@ -22,7 +22,7 @@ SEQ_LENGTH = 25
 max_decoded_sentence_length = SEQ_LENGTH - 1
 
 #locally
-# with open('/Users/ypxt035/Desktop/Priya/ml_deployment_tutorial/Image-captioning-exp/caption_model/caption_tokenizer.pkl','rb') as f:
+# with open('../caption_tokenizer.pkl','rb') as f:
 #     tokenizer = pickle.load(f)
 
 #docker location
