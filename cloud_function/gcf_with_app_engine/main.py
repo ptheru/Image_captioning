@@ -4,7 +4,7 @@ import requests
 import tensorflow as tf
 import numpy as np
 import pickle
-from utils import load_model,load_and_prep_image,index_to_word, output_captions,update_logger
+from utils import load_model,load_and_prep_image,index_to_word, output_captions
 from google.cloud import storage
 
 storage_client = storage.Client()
@@ -24,7 +24,6 @@ def generate_caption(request):
     caption.
 
     Returns:
-     image (preproccessed)
      decoded_caption (caption)
     """
     global caption_model,tokenizer,index_to_word_dict
