@@ -5,7 +5,7 @@ import base64
 import tensorflow as tf
 import numpy as np
 import pickle
-from utils import load_model,load_and_prep_image,index_to_word, output_captions,update_logger
+from utils import load_model,load_and_prep_image,index_to_word, output_captions
 from google.cloud import storage
 
 
