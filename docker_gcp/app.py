@@ -10,7 +10,7 @@ from utils import load_model,load_and_prep_image,index_to_word, output_captions,
 
 # Setup environment credentials 
 
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "caption-generator-priya-40e97ab570d8.json" 
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "google_app_creds.json" 
 # PROJECT = "caption-generator-priya" 
 # REGION = "us-central1" # GCP region (where the model is hosted)
 
