@@ -2,7 +2,7 @@
 ## Caption Generator
 
 Caption Generator takes in input image as request and generates caption for that input request.
-We will be deploying our Streamlit web app on Google App Engine by triggerig google cloud functions.
+We will be deploying our Streamlit web app on Google App Engine by triggering Google Cloud Functions.
 
 Please check out my article here -
 
