@@ -1,6 +1,8 @@
 
 ## Caption Generator
 
+Caption Generator takes in input image as request and generates caption for that input request.
+
 Please check out my artcile here -
 
 https://medium.com/@priyatm1619/deploy-ml-model-on-google-app-engine-by-triggering-google-cloud-functions-6ffdf3046ac7
