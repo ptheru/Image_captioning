@@ -19,18 +19,7 @@ def download(filename):
     blob_weights = bucket.blob(filename)
     blob_weights.download_to_filename('/tmp/' + filename)
 
-
-download('checkpoint.ckpt.data-00000-of-00001')
-download('checkpoint.ckpt.index')
-download('checkpoint')
-download('caption_tokenizer.pkl')
-
-
-with open('/tmp/caption_tokenizer.pkl','rb') as f:
-    tokenizer = pickle.load(f)
-    
-index_to_word_dict = index_to_word(tokenizer)
-
+caption_model = None
 
 def generate_caption(request):
     """
@@ -57,8 +46,15 @@ def generate_caption(request):
     # Turn tensors into int16 (saves a lot of space, ML Engine has a limit of 1.5MB per request)
     image = tf.cast(tf.expand_dims(image, axis=0), tf.int16)
 
-    caption_model = load_model()
-
+    if not caption_model:
+        download('checkpoint.ckpt.data-00000-of-00001')
+        download('checkpoint.ckpt.index')
+        download('checkpoint')
+        download('caption_tokenizer.pkl')
+        tokenizer = pickle.load(open('/tmp/caption_tokenizer.pkl', "rb"))
+        index_to_word_dict = index_to_word(tokenizer)
+        caption_model = load_model()  
+        
     image = caption_model.cnn_model(image)
 
     # Pass the image features to the Transformer encoder
